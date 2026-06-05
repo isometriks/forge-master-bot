@@ -1,0 +1,71 @@
+# Scheduled messages for Forge Master Bot.
+#
+# Cron syntax: https://crontab.guru — standard 5 fields (min hour dom mon dow).
+# channel_id is either a raw Discord channel ID (integer) or the name of an
+# env var holding it (e.g. CHANNEL_ID) so the real ID can stay out of git.
+# Times use the timezone below; defaults to UTC.
+# Restart the bot after editing this file.
+
+timezone: America/New_York
+
+jobs:
+  - cron: "0 20 * * * 0"
+    channel_id: CHANNEL_ID
+    message: |
+      ## 📣 Sunday Heads-Up
+      # Tomorrow is **Tech Tree Upgrade** — start prepping now!
+
+  - cron: "0 20 * * * 1"
+    channel_id: CHANNEL_ID
+    message: |
+      ## ⚒️ Monday
+      🛡️ Forge Equipment
+      📜 Skills
+      🌳 Tech Tree Upgrades
+
+  - cron: "0 20 * * * 2"
+    channel_id: CHANNEL_ID
+    message: |
+      ## 💰 Tuesday
+      🪙 Forge Coins / 💎 Gems
+      🗝️ Dungeon Keys
+      🐾 Pets
+
+  - cron: "0 20 * * * 3"
+    channel_id: CHANNEL_ID
+    message: |
+      ## ⚒️ Wednesday
+      🛡️ Forge Equipment
+      📜 Skills
+      🐎 Mounts
+
+      # Tomorrow is **Tech Tree Upgrade** — start prepping now!
+
+  - cron: "0 20 * * * 4"
+    channel_id: CHANNEL_ID
+    message: |
+      ## 🌳 Thursday
+      🪙 Forge Coins / 💎 Gems
+      🌳 Tech Tree Upgrades
+      🐾 Pets
+
+  - cron: "0 20 * * * 5"
+    channel_id: CHANNEL_ID
+    message: |
+      ## ⚒️ Friday
+      🛡️ Forge Equipment
+      🗝️ Dungeon Keys
+      🐎 Mounts
+
+  - cron: "0 20 * * * 6"
+    channel_id: CHANNEL_ID
+    message: |
+      ## ⚔️ Saturday — BATTLE DAY ⚔️
+      Bring your best loadout. Let's win this. 🏆
+
+  # Daily Reminder — Mon–Fri 7pm ET
+  - cron: "0 19 * * 1-5"
+    channel_id: CHANNEL_ID
+    message: |
+      ## 🌙 Evening Check-In
+      1 Hour Left! ⏰

@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: dev
+    image: forge_master_bot
+    env_file:
+      - .env
+    volumes:
+      - ./mix.lock:/app/mix.lock
+      - ./mix.exs:/app/mix.exs
+      - ./config:/app/config
+      - ./lib:/app/lib
+      - ./test:/app/test
+      - ./.credo.exs:/app/.credo.exs
+      - ./schedule.yml:/app/schedule.yml
