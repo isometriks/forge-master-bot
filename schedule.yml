@@ -9,13 +9,13 @@
 timezone: America/New_York
 
 jobs:
-  - cron: "0 20 * * * 0"
+  - cron: "0 20 * * 0"
     channel_id: CHANNEL_ID
     message: |
       ## 📣 Sunday Heads-Up
       # Tomorrow is **Tech Tree Upgrade** — start prepping now!
 
-  - cron: "0 20 * * * 1"
+  - cron: "0 20 * * 1"
     channel_id: CHANNEL_ID
     message: |
       ## ⚒️ Monday
@@ -23,7 +23,7 @@ jobs:
       📜 Skills
       🌳 Tech Tree Upgrades
 
-  - cron: "0 20 * * * 2"
+  - cron: "0 20 * * 2"
     channel_id: CHANNEL_ID
     message: |
       ## 💰 Tuesday
@@ -31,7 +31,7 @@ jobs:
       🗝️ Dungeon Keys
       🐾 Pets
 
-  - cron: "0 20 * * * 3"
+  - cron: "0 20 * * 3"
     channel_id: CHANNEL_ID
     message: |
       ## ⚒️ Wednesday
@@ -41,7 +41,7 @@ jobs:
 
       # Tomorrow is **Tech Tree Upgrade** — start prepping now!
 
-  - cron: "0 20 * * * 4"
+  - cron: "0 20 * * 4"
     channel_id: CHANNEL_ID
     message: |
       ## 🌳 Thursday
@@ -49,7 +49,7 @@ jobs:
       🌳 Tech Tree Upgrades
       🐾 Pets
 
-  - cron: "0 20 * * * 5"
+  - cron: "0 20 * * 5"
     channel_id: CHANNEL_ID
     message: |
       ## ⚒️ Friday
@@ -57,7 +57,7 @@ jobs:
       🗝️ Dungeon Keys
       🐎 Mounts
 
-  - cron: "0 20 * * * 6"
+  - cron: "0 20 * * 6"
     channel_id: CHANNEL_ID
     message: |
       ## ⚔️ Saturday — BATTLE DAY ⚔️
