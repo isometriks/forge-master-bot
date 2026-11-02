@@ -6,7 +6,10 @@
 # Times use the timezone below; defaults to UTC.
 # Restart the bot after editing this file.
 
-timezone: America/New_York
+# The game resets at 00:00 UTC (8pm EDT in summer, 7pm EST in winter), so
+# schedule in UTC to stay aligned across daylight-saving changes. Note that
+# 00:00 UTC is the *next* calendar day relative to the US evening it falls in.
+timezone: Etc/UTC
 
 # Resource schedule updated 2026-07-05, effective 2026-06-07:
 # Keys move Days 2&5 -> 1&4; Tech moves Days 1&4 -> 2&5;
@@ -14,7 +17,7 @@ timezone: America/New_York
 # Mounts move Days 3&5 -> 2&4. Times are unchanged.
 
 jobs:
-  - cron: "0 20 * * 0"
+  - cron: "0 0 * * 1"
     channel_id: CHANNEL_ID
     message: |
       ## 📣 Sunday Heads-Up
@@ -22,7 +25,7 @@ jobs:
 
       Tomorrow: 🛡️ Forge Equipment, 🗝️ Dungeon Keys, 📜 Skills
 
-  - cron: "0 20 * * 1"
+  - cron: "0 0 * * 2"
     channel_id: CHANNEL_ID
     message: |
       ## ⚒️ Monday
@@ -32,7 +35,7 @@ jobs:
 
       # Tomorrow is **Tech Tree Upgrade** — start prepping now!
 
-  - cron: "0 20 * * 2"
+  - cron: "0 0 * * 3"
     channel_id: CHANNEL_ID
     message: |
       ## 🌳 Tuesday
@@ -40,7 +43,7 @@ jobs:
       🌳 Tech Tree Upgrades
       🐎 Mounts
 
-  - cron: "0 20 * * 3"
+  - cron: "0 0 * * 4"
     channel_id: CHANNEL_ID
     message: |
       ## ⚒️ Wednesday
@@ -49,7 +52,7 @@ jobs:
       🥚 Eggs
       🐾 Pets
 
-  - cron: "0 20 * * 4"
+  - cron: "0 0 * * 5"
     channel_id: CHANNEL_ID
     message: |
       ## 💰 Thursday
@@ -59,7 +62,7 @@ jobs:
 
       # Tomorrow is **Tech Tree Upgrade** — start prepping now!
 
-  - cron: "0 20 * * 5"
+  - cron: "0 0 * * 6"
     channel_id: CHANNEL_ID
     message: |
       ## ⚒️ Friday
@@ -68,14 +71,14 @@ jobs:
       🥚 Eggs
       🐾 Pets
 
-  - cron: "0 20 * * 6"
+  - cron: "0 0 * * 0"
     channel_id: CHANNEL_ID
     message: |
       ## ⚔️ Saturday — BATTLE DAY ⚔️
       Bring your best loadout. Let's win this. 🏆
 
-  # Daily Reminder — every day 7pm ET
-  - cron: "0 19 * * *"
+  # Daily Reminder — 1 hour before reset (23:00 UTC)
+  - cron: "0 23 * * *"
     channel_id: CHANNEL_ID
     message: |
       ## 🌙 Evening Check-In
